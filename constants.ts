@@ -79,3 +79,23 @@ export const ServicesData: IServices[] = [
         checkBoxes: []
     }
 ]
+
+
+export const testimonalsTitle = "Don't take our word for it"
+export const testimonalsDescription = "Vitae aliquet nec ullamcorper sit amet risus nullam eget felis semper quis lectus nulla at volutpat diam ut venenatis tellus—in ornare."
+export const testimonalsMock = [
+    {
+      reviewText: "— Open PRO lets me quickly get the insights I care about so that I can focus on my productive work. I've had Open PRO for about 24 hours now and I honestly don't know how I functioned without it before.",
+      reviewerName: "John Doe",
+      companyName: "Microsoft",
+      icon: "",
+      alt: "john doe picture",
+    },
+    {
+      reviewText: "— Open PRO lets me quickly get the insights I care about so that I can focus on my productive work. I've had Open PRO for about 24 hours now and I honestly don't know how I functioned without it before.",
+      reviewerName: "John Doe",
+      companyName: "Microsoft",
+      icon: "",
+      alt: "john doe picture",
+    }
+  ]

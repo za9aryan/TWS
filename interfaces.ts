@@ -10,3 +10,11 @@ export interface IServices {
     icon: JSX.Element | false;
     checkBoxes: string[]
 }
+
+export interface Itestimonal {
+    reviewText: string;
+    reviewerName: string;
+    companyName: string;
+    icon: string;
+    alt: string
+}
