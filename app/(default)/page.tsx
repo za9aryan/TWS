@@ -1,6 +1,5 @@
 export const metadata = {
-  title: 'Home - Open PRO',
-  description: 'Page description',
+  title: 'TWS - TestWare Solution'
 }
 
 import Hero from '@/components/hero'

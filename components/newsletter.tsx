@@ -1,10 +1,70 @@
+"use client";
+import React from "react"
+import { toast } from 'react-toastify';
+
 export default function Newsletter() {
+
+  interface IUserForm {
+    name: string;
+    email: string;
+    text: string;
+  }
+
+  const [userForm, setUserForm] = React.useState<IUserForm>({
+    name: "",
+    email: "",
+    text: ""
+  })
+
+  const resetUserForm = () => setUserForm({ email: "", name: "", text: "" })
+  const handleSendEmail = (userData: IUserForm) => {
+
+    if (!userData.email || !userData.name || !userData.text) {
+      return
+    }
+
+    var myHeaders = new Headers();
+    myHeaders.append("accept", "application/json");
+    myHeaders.append("api-key", "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");
+    myHeaders.append("content-type", "application/json");
+    myHeaders.append("Cookie", "__cf_bm=6ALKQM.fXYIcex7b1IdgQ7oIMxmeTCmMwVpvg6xBuHE-1698586507-0-ASe9yitMeIHrX9ElebcEL3ywjRiyGmEMS5paxO/LELx7ByAkXYpwsdTvPVZxdZPfRls/lsZLF0mMPf5Kqs7r3Sk=");
+
+    var raw = JSON.stringify({
+      "sender": {
+        "name": "Form Bot",
+        "email": "do-not-reply@testwaresolutions.com"
+      },
+      "to": [
+        {
+          "email": "tws-careers@testwaresolutions.com",
+          "name": "TWS Careers"
+        }
+      ],
+      "subject": "New Applicant",
+      "htmlContent": `<html><head></head><body><p>Hello</p><p>Email:${userForm.email}</p><p>Name:${userForm.name}</p><p>Text:${userForm.text}</p></body></html>`
+    });
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+
+    fetch("https://api.brevo.com/v3/smtp/email", requestOptions)
+      .then(response => response.text())
+      .then(() => resetUserForm())
+      .catch(error => console.log('error', error));
+  }
+
+  console.log(userForm)
+
   return (
-    <section>
+    <section id="contact">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* CTA box */}
-        <div className="relative bg-purple-600 py-10 px-8 md:py-16 md:px-12" data-aos="fade-up">
+        <div className="relative bg-primary-gray py-10 px-8 md:py-16 md:px-12" data-aos="fade-up">
 
           {/* Background illustration */}
           <div className="absolute right-0 top-0 -ml-40 pointer-events-none" aria-hidden="true">
@@ -29,9 +89,20 @@ export default function Newsletter() {
 
             {/* CTA form */}
             <form className="w-full lg:w-1/2">
-              <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-                <input type="email" className="w-full appearance-none bg-purple-700 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400" placeholder="Your best email…" aria-label="Your best email…" />
-                <a className="btn text-purple-600 bg-purple-100 hover:bg-white shadow" href="#0">Subscribe</a>
+              <div className="flex flex-col justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
+                <div>
+                  <label>Name</label>
+                  <input type="text" value={userForm.name} onChange={e => setUserForm({ ...userForm, name: e.target.value })} className="w-full appearance-none bg-primary-whiteHover outline-0 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-primary-black placeholder-primary-black" placeholder="Your Name…" aria-label="Your Name…" />
+                </div>
+                <div>
+                  <label>Eamil</label>
+                  <input type="email" value={userForm.email} onChange={e => setUserForm({ ...userForm, email: e.target.value })} className="w-full appearance-none bg-primary-whiteHover outline-0 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-primary-black placeholder-primary-black" placeholder="Your Email…" aria-label="Your Email…" />
+                </div>
+                <div>
+                  <label>Message</label>
+                  <textarea rows="5" value={userForm.text} onChange={e => setUserForm({ ...userForm, text: e.target.value })} className="w-full appearance-none bg-primary-whiteHover outline-0 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-primary-black placeholder-primary-black" placeholder="Your Message…" aria-label="Your Message…" />
+                </div>
+                <a onClick={() => handleSendEmail(userForm)} className="btn text-primary-white bg-primary-green mt-4 hover:bg-primary-greenHover shadow cursor-pointer">Send</a>
               </div>
               {/* Success message */}
               {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}

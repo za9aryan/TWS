@@ -30,6 +30,13 @@ module.exports = {
           800: '#38379C',
           900: '#262668',
         },
+        primary: {
+          green: "#5dc300",
+          greenHover: "#6ee502",
+          whiteHover: "#FFF",
+          gray: "#25282c",
+          black: "#000000"
+        },
       },
       spacing: {
         '9/16': '56.25%',
