@@ -1,5 +1,5 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home/solutiontest/repositories/TWS/
- - /bin/cp * $DEPLOYPATH
+ - export DEPLOYPATH=/home/solutiontest/public-html/
+ - /bin/cp -R * $DEPLOYPATH
