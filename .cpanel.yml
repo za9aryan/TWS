@@ -1,0 +1,5 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/solutiontest/repositories/TWS/
+ - /bin/cp index.html $DEPLOYPATH
