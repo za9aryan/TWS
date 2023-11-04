@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
 import Icon from '@/public/images/tws-logo.jpg'
 import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
 const IconImg = <Image className="max-w-full mx-auto md:max-w-none h-auto rounded-full " src={Icon} width={65} height={65} alt="TWS - TestWare Solutions" />
 
@@ -22,11 +22,11 @@ export default function Footer() {
               {IconImg}
             </Link>
               </div>
-              <div className="text-gray-400">TestWare Solutions</div>
+              <div className="text-gray-400 text-center">TestWare Solutions</div>
             </div>
 
             {/* 2nd, 3rd and 4th blocks */}
-            <div className="md:col-span-8 lg:col-span-7 grid sm:grid-cols-3 gap-8">
+            <div className="md:col-span-8 lg:col-span-7 grid sm:grid-cols-1 text-center gap-8">
 
               {/* 2nd block */}
               <div className="text-sm">
