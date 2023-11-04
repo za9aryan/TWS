@@ -1,17 +1,17 @@
-import Image from 'next/image'
+import { ServiceDescription, ServiceTitle, ServicesData } from '../constants'
 
 import FeatImage01 from '@/public/images/Defining-a-Strategy-Planning.png'
 import FeatImage02 from '@/public/images/features-03-image-02.png'
 import FeatImage03 from '@/public/images/features-03-image-03.png'
-import { ServiceTitle, ServiceDescription, ServicesData } from '../constants'
 import { IServices } from '../interfaces'
+import Image from 'next/image'
 
 export default function Zigzag() {
 
 
 
-  const defaultImage = <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage01} width={540} height={405} alt="Features 01" />
-
+  const defaultImage = <Image className="max-w-full mx-auto md:max-w-none h-auto" src={"/images/Defining-a-Strategy-Planning.png"} width={540} height={405} alt="Features 01" />
+  const createDycnamicImage = (path: string) => <Image className="max-w-full mx-auto md:max-w-none h-auto" src={path} width={540} height={405} alt="Features 01" />
   
 
   const renderServices = (el: IServices, index: number) => {
@@ -19,7 +19,7 @@ export default function Zigzag() {
       <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
         {/* Image */}
         <div className={`max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 ${(index + 1) % 2 === 0 ? "rtl" : "md:order-1"}`} data-aos="fade-up">
-          {el.icon || defaultImage}
+          {el.icon ? createDycnamicImage(el.icon) : defaultImage}
         </div>
         {/* Content */}
         <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos={(index + 1) % 2 === 0 ? "fade-left" : "fade-right"}>

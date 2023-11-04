@@ -7,7 +7,7 @@ export interface IFeatures {
 export interface IServices {
     title: string;
     description: string;
-    icon: JSX.Element | false;
+    icon: string;
     checkBoxes: string[]
 }
 
