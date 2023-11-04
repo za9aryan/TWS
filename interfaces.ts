@@ -1,7 +1,7 @@
 export interface IFeatures {
     title: string;
     description: string;
-    icon: JSX.Element | false
+    icon: string | false
 }
 
 export interface IServices {

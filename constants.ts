@@ -8,47 +8,47 @@ export const FeaturesData: IFeatures[] = [
     {
         title: "Test Automation",
         description: "Our test automation services harness the power of automation tools and frameworks to speed up your testing processes, increase coverage, and reduce costs. Elevate your software with the efficiency of automation.",
-        icon: false
+        icon: "/images/automation-icon.png"
     },
     {
         title: "Process Improvement",
         description: "We specialize in optimizing your testing processes, streamlining your workflows, and reducing inefficiencies. Our process improvement services enhance the quality and speed of your software delivery, making your development lifecycle more agile and cost-effective.",
-        icon: false
+        icon: "/images/Process-Improvement-icon.png"
     },
     {
         title: "E2E (End-to-End) Testing",
         description: "We prioritize your end-users' experiences. Our E2E testing services simulate the user's journey to identify and resolve issues at every touchpoint. We ensure your software delivers a seamless, reliable, and user-friendly experience..",
-        icon: false
+        icon: "/images/start-end.png"
     },
     {
         title: "Functional Testing",
         description: "Is your application's functionality aligned with customer expectations? At Quality Tech Lab, we understand that functionality testing is a pivotal business process that distinguishes companies. That's why we implement it according to the most stringent product specifications and exploratory testing standards, ensuring the detection of bottlenecks and the mitigation of all risks.",
-        icon: false
+        icon: "/images/func-icon.png"
     },
     {
         title: "API Testing",
         description: "The heart of your software's functionality often lies within its APIs. Our API testing services thoroughly examine the functionality, reliability, and security of your APIs, ensuring they work seamlessly and securely with other systems.",
-        icon: false
+        icon: "/images/api-icon.png"
     },
     {
         title: "Mobile Testing",
         description: "Mobile apps are the cornerstone of today's digital world. We meticulously test your mobile applications, ensuring they run smoothly across different devices, operating systems, and screen sizes. Our mobile testing services guarantee optimal performance and user satisfaction.",
-        icon: false
+        icon: "/images/mobile-icon-horizontal.png"
     },
     {
         title: "Consulting",
         description: "When you need expert advice and guidance on testing strategies, we're here to help. Our seasoned consultants provide valuable insights and help you make informed decisions to ensure your software quality meets your business goals.",
-        icon: false
+        icon: "/images/cunsulting-icon.png"
     },
     {
         title: " WEB Testing",
         description: "Your online presence is your digital storefront. We ensure your websites and web applications are flawless, performing at their best, secure, and compatible with various browsers and platforms. Our web testing services help you deliver an exceptional online user experience.",
-        icon: false
+        icon: "/images/web-icon.png"
     },
     {
         title: "Accessibility",
         description: "It is very important to make sure that nobody miss out all the wonders of digital world, our dedication and hard work. Our team  is always ready to take the challenge.",
-        icon: false
+        icon: "/images/accessibility-icon.png"
     }
 ]
 export const FeatureTitle = "Our Solutions"

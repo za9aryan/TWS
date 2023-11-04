@@ -1,5 +1,7 @@
+import { FeatureDescription, FeatureTitle, FeaturesData } from "../constants"
+
 import { IFeatures } from "../interfaces"
-import { FeatureTitle, FeatureDescription, FeaturesData } from "../constants"
+import Image from "next/image"
 
 export default function Features() {
 
@@ -9,6 +11,8 @@ export default function Features() {
     <path className="stroke-current text-purple-100" d="M30 39.313l-4.18 2.197L27 34.628l-5-4.874 6.91-1.004L32 22.49l3.09 6.26L42 29.754l-3 2.924" strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd" />
     <path className="stroke-current text-purple-300" d="M43 42h-9M43 37h-9" strokeLinecap="square" strokeWidth="2" />
   </svg></>
+
+  const ceateFeatureImage = (path: string) => <div className="flex items-center bg-primary-green p-1 rounded-full w-16 h-16 mb-2"><Image className="max-w-full mx-auto md:max-w-none h-auto" src={path} width={35} height={35} alt="Features 01" /></div>
 
   // const featuresData: IFeatures[] = [
   //   {
@@ -21,7 +25,9 @@ export default function Features() {
   const renderFeatures = (el: IFeatures) => {
     return (
       <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
-        {el?.icon || svgIcon}
+        <div>
+        {el?.icon ? ceateFeatureImage(el.icon) : svgIcon}
+        </div>
         <h4 className="h4 mb-2">{el.title}</h4>
         <p className="text-lg text-gray-400 text-center">{el.description}</p>
       </div>
