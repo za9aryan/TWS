@@ -33,16 +33,16 @@ export default function Footer() {
                 <h6 className="text-gray-200 font-medium mb-1">Products</h6>
                 <ul>
                   <li className="mb-1">
-                    <Link href="/#OurSolutions" className="text-gray-400 hover:text-primary-greenHover transition duration-150 ease-in-out">Our Solutions</Link>
+                    <a href="/#OurSolutions" className="text-gray-400 hover:text-primary-greenHover transition duration-150 ease-in-out">Our Solutions</a>
                   </li>
                   <li className="mb-1">
-                    <Link href="/#howWeDoIt" className="text-gray-400 hover:text-primary-greenHover transition duration-150 ease-in-out">How We Do It</Link>
+                    <a href="/#howWeDoIt" className="text-gray-400 hover:text-primary-greenHover transition duration-150 ease-in-out">How We Do It</a>
                   </li>
                   <li className="mb-1">
-                    <Link href="/#benefits" className="text-gray-400 hover:text-primary-greenHover transition duration-150 ease-in-out">Benefits</Link>
+                    <a href="/#benefits" className="text-gray-400 hover:text-primary-greenHover transition duration-150 ease-in-out">Benefits</a>
                   </li>
                   <li className="mb-1">
-                    <Link href="/#contact" className="text-gray-400 hover:text-primary-greenHover transition duration-150 ease-in-out">Contact Us</Link>
+                    <a href="/#contact" className="text-gray-400 hover:text-primary-greenHover transition duration-150 ease-in-out">Contact Us</a>
                   </li>
                 </ul>
               </div>

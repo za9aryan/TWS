@@ -60,25 +60,25 @@ export const ServicesData: IServices[] = [
     {
         title: "Defining a Strategy & Planning",
         description: "",
-        icon: "/images/features-03-image-03.png",
+        icon: "/images/Defining-a-Strategy-Planning.png",
         checkBoxes: ["Strategy Selection: We'll choose a tailored testing strategy that aligns with your business needs and our expertise. This strategy outlines the testing objectives, implementation plan, and timeline.", "Process Planning: After selecting the strategy, we'll initiate the testing process by creating a detailed plan that covers all aspects of the testing.", "Execution: With the plan in place, we'll carry out the testing as per the defined strategy, monitoring it from start to finish."]
     },
     {
         title: "Analyzing & Designing",
         description: "",
-        icon: "/images/Defining-a-Strategy-Planning.png",
+        icon: "/images/Analyzing & Designing.png",
         checkBoxes: ["Specification Analysis: We analyze the product specifications and identify the components to be tested.", "Test Case Creation: Once the testable features are defined, we begin creating test cases and test suites.", "Effective Test Design: Designing well-considered test cases is a critical success factor in the testing process.."]
     },
     {
         title: "Testing & Reporting",
         description: "",
-        icon: "/images/features-03-image-03.png",
+        icon: "/images/TESTING & REPORTING.png",
         checkBoxes: ["Test Execution: We execute the designed tests in the chosen test environments with prepared test data.", "Reality Check: During this phase, we compare expected outcomes with actual results to identify any discrepancies.", "Issue Handling: If any incidents or issues arise, they are analyzed, reported, and retested after necessary fixes are made."]
     },
     {
         title: "Summary Report",
         description: "Descritpion",
-        icon: "/images/features-03-image-03.png",
+        icon: "/images/SUMMARY REPORT.png",
         checkBoxes: ["Summary Report: In the final testing step, we provide stakeholders with a summary report on the outcomes of the last testing cycle.", "Improvement Recommendations: We also aim to offer improvement suggestions at this stage."]
     }
     // {
