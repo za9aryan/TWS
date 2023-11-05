@@ -28,7 +28,7 @@ export default function Header() {
                   target="_blank"
                   className="font-medium text-primary-green hover:text-primary-whiteHover px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  linkedIn
+                  LinkedIn
                 </Link>
               </li>
               <li>

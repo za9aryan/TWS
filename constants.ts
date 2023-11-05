@@ -1,7 +1,7 @@
 import { IFeatures, IServices } from "./interfaces";
 
 export const BannerTitle = "TestWare Solutions"
-export const BannerDescription = "Your Guarantee of High Quality"
+export const BannerDescription = "Empowering Quality in the Digital World"
 export const BannerButtonText = "Learn More"
 
 export const FeaturesData: IFeatures[] = [
@@ -22,7 +22,7 @@ export const FeaturesData: IFeatures[] = [
     },
     {
         title: "Functional Testing",
-        description: "Is your application's functionality aligned with customer expectations? At Quality Tech Lab, we understand that functionality testing is a pivotal business process that distinguishes companies. That's why we implement it according to the most stringent product specifications and exploratory testing standards, ensuring the detection of bottlenecks and the mitigation of all risks.",
+        description: "Discover our comprehensive functional testing solutions designed to ensure your website's reliability and seamless functionality. Our team of experts uses advanced tools and a user-centric approach to detect and address issues, leaving you with a flawless user experience.",
         icon: "/images/func-icon.png"
     },
     {
@@ -52,10 +52,10 @@ export const FeaturesData: IFeatures[] = [
     }
 ]
 export const FeatureTitle = "Our Solutions"
-export const FeatureDescription = "The quality is we make"
+export const FeatureDescription = "Quality is our craft at TestWare Solutions."
 
-export const ServiceTitle = "How We Do It"
-export const ServiceDescription = "The process at TWS is simple."
+export const ServiceTitle = "Our Approach at TestWare Solutions"
+export const ServiceDescription = "Efficiency Through Subtle Refinement."
 export const ServicesData: IServices[] = [
     {
         title: "Defining a Strategy & Planning",
@@ -77,7 +77,7 @@ export const ServicesData: IServices[] = [
     },
     {
         title: "Summary Report",
-        description: "Descritpion",
+        description: "",
         icon: "/images/SUMMARY REPORT.png",
         checkBoxes: ["Summary Report: In the final testing step, we provide stakeholders with a summary report on the outcomes of the last testing cycle.", "Improvement Recommendations: We also aim to offer improvement suggestions at this stage."]
     }
