@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react"
-import { toast } from 'react-toastify';
 
 export default function Newsletter() {
 
@@ -45,7 +44,7 @@ export default function Newsletter() {
       "htmlContent": `<html><head></head><body><p>Hello</p><p>Email:${userForm.email}</p><p>Name:${userForm.name}</p><p>Text:${userForm.text}</p></body></html>`
     });
 
-    var requestOptions = {
+    var requestOptions : any = {
       method: 'POST',
       headers: myHeaders,
       body: raw,
@@ -104,7 +103,7 @@ export default function Newsletter() {
                 </div>
                 <div>
                   <label>Message</label>
-                  <textarea rows="5" value={userForm.text} onChange={e => setUserForm({ ...userForm, text: e.target.value })} className="w-full appearance-none bg-primary-whiteHover outline-0 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-primary-black placeholder-primary-black" placeholder="Your Message…" aria-label="Your Message…" />
+                  <textarea rows={5} value={userForm.text} onChange={e => setUserForm({ ...userForm, text: e.target.value })} className="w-full appearance-none bg-primary-whiteHover outline-0 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-primary-black placeholder-primary-black" placeholder="Your Message…" />
                 </div>
                 <a onClick={() => handleSendEmail(userForm)} className="btn text-primary-white bg-primary-green mt-4 hover:bg-primary-greenHover shadow cursor-pointer">Send</a>
               </div>
